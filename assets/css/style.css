@@ -1259,12 +1259,12 @@ textarea {
           transform: translateY(5px);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: var(--color-white);
-  background-color: var(--color-gray);
+  color: var(--color-dark);
+  background-color: var(--color-white);
   border-radius: var(--border-radius-small);
 }
 .language .sub-menu.show {
-  margin-top: 10px;
+  margin-top: 5px;
   opacity: 1;
   visibility: visible;
   -webkit-transform: translateY(0);
@@ -1273,7 +1273,7 @@ textarea {
 .language .sub-menu.open-up {
   top: auto;
   bottom: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
