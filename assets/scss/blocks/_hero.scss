@@ -1,0 +1,32 @@
+.hero {
+    min-height: 460px;
+    padding: 60px 0;
+    color: var(--color-white);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--color-dark);
+
+    & h1 {
+        margin-bottom: 30px;
+    }
+
+    & p {
+        color: var(--color-white);
+        max-width: 1100px;
+        text-wrap: prety;
+    }
+
+    & .buttons {
+        margin-top: 60px;
+        gap: clamp(1rem, -0.75rem + 5vw, 3.125rem);
+
+        @include phone {
+            flex-direction: column;
+        }
+
+        & .button {
+            min-width: 190px;
+        }
+    }
+}
