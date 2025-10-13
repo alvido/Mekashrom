@@ -1,18 +1,61 @@
 .language {
+    width: 100%;
+    margin-top: 23px;
     position: relative;
     @include reset-button;
     @include flex-center;
-    color: var(--color-white);
+    justify-content: flex-start;
     overflow: hidden;
+    background-color: var(--color-white);
+    padding: 4px;
+    border-radius: 4px;
 
     &.active {
         overflow: visible;
+
+        & .language__list {
+            &>li {
+                &>a {
+                    &::after {
+                        rotate: 180deg;
+                    }
+                }
+            }
+        }
     }
 
 
     &__list {
+        width: 100%;
+
         &>li {
-            & a {
+            &>a {
+                @include flex-center;
+                justify-content: flex-start;
+                gap: 8px;
+
+                @include hover {
+                    &::after {
+                        background: var(--color-accent);
+                    }
+                }
+
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    min-width: 16px;
+                    height: 16px;
+                    background: var(--color-dark);
+                    mask: url('../images/icons/arrow-down.svg') no-repeat center;
+                    -webkit-mask: url('../images/icons/arrow-down.svg') no-repeat center;
+                    mask-size: contain;
+                    -webkit-mask-size: contain;
+                    transition-duration: var(--transition-duration);
+                    margin-left: auto;
+                }
+
+
+
                 & img {
                     width: 20px !important;
                     height: auto !important;
@@ -25,7 +68,7 @@
 
 
     & .sub-menu {
-        width: max-content;
+        width: 100%;
         position: absolute;
         top: 100%;
         left: 0;
@@ -59,7 +102,11 @@
 
         & a {
             padding: 6px;
+            @include flex-center;
             justify-content: flex-start;
+            gap: 8px;
+
+
 
             @include hover {
                 color: var(--color-white);

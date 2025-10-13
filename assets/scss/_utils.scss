@@ -37,6 +37,12 @@ section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: var(--color-white);
+
+    @include desktop-above {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
 }
 
 .center {
