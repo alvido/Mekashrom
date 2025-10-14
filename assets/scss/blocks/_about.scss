@@ -1,4 +1,10 @@
 .about {
+    margin-bottom: 150px;
+
+    @include mobile {
+        margin-bottom: 100px;
+    }
+
     & .row {
         align-items: normal;
         justify-content: space-between;

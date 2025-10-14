@@ -26,7 +26,12 @@
         }
 
         & .button {
+            min-width: 240px;
+            height: 49px;
+
+            &--dark {
             min-width: 190px;
+            }
         }
     }
 }

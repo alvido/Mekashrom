@@ -1,29 +1,70 @@
-    label {
+    form {
+        margin: 0 auto;
+        padding: 60px 0;
         display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 700px;
+
+        @include mobile {
+            padding: 30px 0;
+        }
+
+        & .button {
+            align-self: center;
+            min-width: 200px;
+        }
+    }
+
+    label {
+        font-size: 18px;
+        font-weight: 500;
+        text-wrap: nowrap;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        & span {
+            font-size: 12px;
+            color: var(--color-red);
+        }
     }
 
     input,
     textarea {
-        font-family: var(--font-family-base);
         outline: none;
         width: 100%;
         height: var(--input-height);
-        padding: 16px 24px;
+        padding: 0 15px;
+        color: var(--color-dark);
+        border: var(--border);
+        border-radius: var(--border-radius-small);
 
-        color: var(--color-black);
-        border: 1px solid var(--color-gray-alt);
+        &.error {
+            border-color: var(--color-red);
+            background: #E600001A;
+        }
+
+        &.verified {
+            border-color: var(--color-accent);
+        }
 
         &::placeholder {
             color: var(--color-gray);
         }
 
         &:focus-visible {
-            border: 1px solid var(--color-blue);
+            border-color: var(--color-accent);
         }
 
     }
+ 
 
     textarea {
+        padding: 13px 15px;
         min-height: 120px;
         resize: none;
     }
@@ -38,7 +79,7 @@
         user-select: none;
         position: relative;
         cursor: pointer;
-        color: var(--color-black);
+        color: var(--color-dark);
         background: var(--color-white);
 
         /* Скрыть стандартный radio button */
@@ -51,7 +92,7 @@
             width: 0;
 
             &:checked~.radiomark {
-                border-color: var(--color-blue);
+                border-color: var(--color-accent);
 
                 &::after {
                     opacity: 1;
@@ -59,8 +100,8 @@
             }
 
             &:checked+.checkmark {
-                border-color: var(--color-blue);
-                background: var(--color-blue);
+                border-color: var(--color-accent);
+                background: var(--color-accent);
 
                 &::after {
                     opacity: 1;
@@ -68,10 +109,10 @@
             }
 
             &:checked+.switchmark {
-                border-color: var(--color-blue);
+                border-color: var(--color-accent);
 
                 &::after {
-                    background: var(--color-blue);
+                    background: var(--color-accent);
                     transform: translateX(calc(100% + 4px));
                 }
             }
@@ -85,7 +126,7 @@
             position: relative;
             cursor: pointer;
             background: var(--transparent);
-            border: 2px solid var(--color-black);
+            border: 2px solid var(--color-dark);
             transition: all .3s ease;
 
             &::after {
@@ -98,7 +139,7 @@
                 width: 80%;
                 height: 80%;
                 opacity: 0;
-                background: var(--color-blue);
+                background: var(--color-accent);
                 border-radius: 50%;
                 transition: all .3s ease;
             }
@@ -112,7 +153,7 @@
             position: relative;
             cursor: pointer;
             background: var(--color-transparent);
-            border: 2px solid var(--color-black);
+            border: 2px solid var(--color-dark);
 
             &::after {
                 content: "";
