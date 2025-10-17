@@ -61,11 +61,15 @@
                     @include tablet {
                         position: static;
                         background: none;
-                        padding: 10px 0 0 10px;
+                        padding: 10px;
                     }
 
                     &>li {
                         margin-bottom: 15px;
+
+                        @include tablet {
+                            margin: 0;
+                        }
 
                         &:last-child {
                             margin-bottom: 0;
@@ -200,7 +204,7 @@
             width: 100%;
 
             & a {
-                color: var(--color-dark);
+                color: var(--color-black);
                 padding: 10px 0;
 
                 @include hover {

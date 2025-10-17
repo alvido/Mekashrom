@@ -5,7 +5,7 @@ html {
 body {
     @include fluid-text(22, 18);
     color: var(--color-title);
-    background: var(--color-gray-light);
+    background: #ececec;
 
     font-family: var(--font-family-base);
     font-weight: 400;
