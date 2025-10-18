@@ -1,5 +1,7 @@
 .language {
     width: 100%;
+    max-width: 200px;
+    height: 30px;
     margin-top: 23px;
     position: relative;
     @include reset-button;
