@@ -1300,7 +1300,8 @@ textarea {
   background-color: var(--color-dark);
 }
 .hero h1 {
-  margin-bottom: 30px;
+  max-width: 870px;
+  margin: 0 auto 30px;
 }
 .hero p {
   color: var(--color-white);
@@ -1782,7 +1783,11 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 100px;
+  gap: clamp(1.875rem, -42.569rem + 69.44vw, 11.25rem);
 }
 @media (max-width: 1023px) {
   .footer__inner {
@@ -1792,6 +1797,11 @@ textarea {
             flex-direction: column;
     gap: 50px;
   }
+}
+.footer__inner .column {
+  width: auto;
+}
+@media (max-width: 1023px) {
   .footer__inner .column {
     width: 100%;
   }
@@ -1826,6 +1836,7 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
+  gap: clamp(1.875rem, -18.866rem + 32.41vw, 6.25rem);
   font-size: 16px;
 }
 @media (max-width: 1023px) {
@@ -1833,9 +1844,14 @@ textarea {
     width: 50%;
   }
 }
-@media (max-width: 1023px) and (max-width: 560px) {
+@media (max-width: 1023px) and (max-width: 767px) {
   .footer__actions nav {
     width: auto;
+  }
+}
+@media (max-width: 767px) {
+  .footer__actions {
+    gap: 23px;
   }
 }
 @media (max-width: 560px) {
@@ -1876,7 +1892,7 @@ textarea {
 }
 
 .copy {
-  margin-top: 30px;
+  margin-top: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1890,7 +1906,6 @@ textarea {
       -ms-flex-pack: start;
           justify-content: start;
   gap: 20px;
-  font-size: 12px;
   font-weight: 300;
 }
 @media (max-width: 560px) {
@@ -1899,5 +1914,6 @@ textarea {
   }
 }
 .copy p, .copy a {
+  font-size: 12px;
   color: var(--color-gray);
 }/*# sourceMappingURL=style.css.map */
