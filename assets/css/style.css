@@ -1479,8 +1479,16 @@ textarea {
   gap: 20px;
 }
 .expertise__list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-width: 290px;
   width: calc(25% - 15px);
+  max-width: 380px;
   padding: 20px;
   -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
@@ -1499,6 +1507,9 @@ textarea {
 .expertise__list li img {
   max-width: 60px;
 }
+.expertise__list li h3 {
+  font-size: clamp(20px, 1.7741935484vw, 22px);
+}
 .expertise__list li p {
   margin-top: 25px;
 }
@@ -1506,6 +1517,9 @@ textarea {
   .expertise__list li p {
     margin-top: 15px;
   }
+}
+.expertise__list li a.link {
+  margin: 20px auto 0;
 }
 
 .products {
