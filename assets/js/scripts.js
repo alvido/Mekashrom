@@ -52,32 +52,6 @@ const init = async () => {
     });
   }
 
-
-  // Fixed Header //
-  const header = document.querySelector(".header");
-  const main = document.querySelector(".main");
-
-  if (header && main) {
-    const headerH = header.offsetHeight; // Получаем высоту хедера
-    const checkScroll = (scrollOffset) => {
-      if (scrollOffset >= headerH) {
-        header.classList.add("fixed");
-        main.style.paddingTop = `${headerH}px`; // Устанавливаем верхний отступ
-      } else {
-        header.classList.remove("fixed");
-        main.style.paddingTop = `0`; // Убираем верхний отступ
-      }
-    };
-
-    let scrollOffset = window.scrollY; // Начальное значение прокрутки
-    checkScroll(scrollOffset);
-
-    window.addEventListener("scroll", () => {
-      scrollOffset = window.scrollY;
-      checkScroll(scrollOffset);
-    });
-  }
-  // Fixed Header //
 };
 
 

@@ -959,18 +959,12 @@ textarea {
 
 /* select */
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   padding: 17px 0;
   color: var(--color-white);
   background: var(--color-dark);
-}
-.header.fixed {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 .header__inner {
   display: -webkit-box;
@@ -1703,7 +1697,7 @@ textarea {
 }
 @media (max-width: 767px) {
   .breadcrumbs {
-    padding: 30px 0 0px;
+    padding: 30px 0;
   }
 }
 .breadcrumbs h1 {
